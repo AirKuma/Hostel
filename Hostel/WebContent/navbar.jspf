@@ -1,0 +1,51 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ page import="DBHostel.*" %>
+
+    <div class="container">
+    <div class="col-md-12 column">   
+        <h1>Four in One<small> 民宿訂房系統</small></h1>
+ <nav  class="navbar navbar-default navbar-top" role="navigation">
+   
+
+	<div  class="navbar-header">
+  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+  </div>
+    <div id="navbar" class="navbar-collapse collapse">
+		<ul class="nav navbar-nav"> 
+            <li class="${pageContext.request.requestURI eq '/Hostel/index.jsp' ? ' active' : ''}"><a href="index.jsp">首頁</a></li>
+            <li class="${pageContext.request.requestURI eq '/Hostel/search.jsp' ? ' active' : ''}"><a href="search.jsp">查詢民宿</a></li>
+            <li class="${pageContext.request.requestURI eq '/Hostel/createhostel.jsp' ? ' active' : ''}"><a href="createhostel.jsp">新增民宿</a></li>
+            <li class="${pageContext.request.requestURI eq '/Hostel/message.jsp' ? ' active' : ''}"><a href="message.jsp">站內通訊</a></li>        
+			<li class="dropdown"> <a class="dropdown-toggle" data-toggle="dropdown" href="">個人空間 <span class="caret"></span></a> 
+		<ul class="dropdown-menu"> 
+				<%DBhostel db5 = new DBhostel(); 
+    if(db5.isowner((String)session.getAttribute("user"))){%>
+				<li><a href="myhostel.jsp">我的民宿</a></li> 				
+				<li><a href="Eva_cus.jsp">評價客戶</a></li> <%} %>
+				<li><a href="Eva_hostel.jsp">評價民宿</a></li>
+				<li><a href="listcollect.jsp">我的收藏</a></li> 
+				<li><a href="getmessage.jsp">訊息通知</a></li> 
+				<li><a href="orderlist.jsp">預約清單</a></li> 
+		</ul> 
+			</li> 	
+			</ul>
+		<ul class="nav navbar-nav navbar-right">
+<% if(session.getAttribute("user")== null){%>		
+		<li><a href="login.jsp">登入</a></li> 
+		<li><a href="register.jsp">註冊</a></li> 
+<%}else{%>
+
+<li><a><%=(String)session.getAttribute("user") %></a></li>	
+		<li><a href="/Hostel/LogoutServlet">登出</a></li>	
+<%}%>	
+		
+		</ul>
+	</div> </nav>
+  </div>
+     </div>

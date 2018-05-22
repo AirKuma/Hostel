@@ -1,0 +1,12 @@
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="CSS/stylesheet.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="starter-template.css" rel="stylesheet">
+<style type="text/css"> 
+ body {
+ 	background-attachment: fixed;
+	background-image: url(img/bg3.jpg);
+}
+</style>

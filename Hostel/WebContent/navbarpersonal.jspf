@@ -1,0 +1,18 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ page import="DBHostel.*" %>    
+<div class="container"> <div class="col-md-12 column">   
+<div class="tabbable"> 
+  <ul class="nav nav-tabs">
+    <li class="${pageContext.request.requestURI eq '/Hostel/myhostel.jsp' ? ' active' : ''}">
+    <%DBhostel db3 = new DBhostel(); 
+    if(db3.isowner((String)session.getAttribute("user"))){%>
+    <a href="myhostel.jsp" >我的民宿</a></li>
+    <li class="${pageContext.request.requestURI eq '/Hostel/Eva_cus.jsp' ? ' active' : ''}"><a href="Eva_cus.jsp" >評價客戶</a></li><%} %>
+    <li class="${pageContext.request.requestURI eq '/Hostel/Eva_hostel.jsp' ? ' active' : ''}"><a href="Eva_hostel.jsp" >評價民宿</a></li>
+    <li class="${pageContext.request.requestURI eq '/Hostel/listcollect.jsp' ? ' active' : ''}"><a href="listcollect.jsp" >我的收藏</a></li>
+    <li class="${pageContext.request.requestURI eq '/Hostel/getmessage.jsp' ? ' active' : ''}"><a href="getmessage.jsp" >訊息通知</a></li>
+    <li class="${pageContext.request.requestURI eq '/Hostel/orderlist.jsp' ? ' active' : ''}"><a href="orderlist.jsp" >預約清單</a></li>
+  </ul>
+</div>
+</div>   </div>

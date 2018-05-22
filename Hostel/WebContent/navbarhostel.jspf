@@ -1,0 +1,12 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<div class="container">
+<div class="tabbable">     <div class="col-md-12 column">   
+  <ul class="nav nav-tabs">
+    <li class="${pageContext.request.requestURI eq '/Hostel/Hostel.jsp' ? ' active' : ''}"><a href="Hostel.jsp" >民宿簡介</a></li>
+    <li class="${pageContext.request.requestURI eq '/Hostel/Room.jsp' ? ' active' : ''}"><a href="Room.jsp" >客房介紹</a></li>
+    <li class="${pageContext.request.requestURI eq '/Hostel/order.jsp' ? ' active' : ''}"><a href="order.jsp" >預約民宿</a></li>
+    <li class="${pageContext.request.requestURI eq '/Hostel/showevaluate.jsp' ? ' active' : ''}"><a href="showevaluate.jsp" >查看民宿評價</a></li>
+  </ul>
+</div></div>
+</div>
