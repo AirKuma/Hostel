@@ -9,7 +9,6 @@ import Hostel.Hostel;
 //test
 public class DBcollect extends DBcore{
 	public static final String[] TITLES={"民宿編號","民宿名稱","民宿地址"};
-	//test
 public void collect(Collection colData) throws Exception {
 	    
 	  	try {
