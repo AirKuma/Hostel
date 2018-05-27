@@ -6,7 +6,7 @@ import java.util.List;
 
 import Hostel.Collection;
 import Hostel.Hostel;
-//dev_01
+//dev_01:01
 public class DBcollect extends DBcore{
 	public static final String[] TITLES={"民宿編號","民宿名稱","民宿地址"};
 public void collect(Collection colData) throws Exception {
