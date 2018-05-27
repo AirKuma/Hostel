@@ -5,5 +5,5 @@ public interface DBConstants {
 	String URI = "jdbc:odbc:hostel";
 	String USERNAME = "fourinone";
 	String PASSWORD = "hostel";   //dev_test dev_01
-	//test
+	//test dev_01
 }
