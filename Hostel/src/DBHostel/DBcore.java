@@ -5,7 +5,7 @@ import java.sql.*;
 
 public class DBcore implements DBConstants
 {
-
+// dev_02
   public Connection makeConnection() throws Exception{
     Connection conn;
     try{      
